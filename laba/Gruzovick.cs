@@ -24,6 +24,10 @@ namespace laba
             WheelsColor = wheelsColor;
         }
 
+        public override string getCarType() {
+            return "Грузовик";
+        }
+
         /// Определение движения транспорта
 
         public override void MoveTransport(Direction direction)

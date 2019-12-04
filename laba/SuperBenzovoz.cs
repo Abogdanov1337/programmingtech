@@ -20,11 +20,15 @@ namespace laba
         public SuperBenzovoz(int maxSpeed, float weight, Color mainColor, Color dopColor, Color wheelsColor) : 
             base(maxSpeed, weight, mainColor, dopColor, wheelsColor)
         {
+        }
 
+        public override string getCarType()
+        {
+            return "Бензовоз";
         }
 
         /// Отрисовка автомобиля
-        
+
         public override void DrawCar(Graphics g)
         {
             Pen pen = new Pen(Color.Black);

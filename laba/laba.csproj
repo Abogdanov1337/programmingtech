@@ -51,6 +51,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGarage.Designer.cs">
+      <DependentUpon>FormGarage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garage.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Gruzovick.cs" />
     <Compile Include="ITransport.cs" />
@@ -59,6 +66,9 @@
     <Compile Include="SuperBenzovoz.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGarage.resx">
+      <DependentUpon>FormGarage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
