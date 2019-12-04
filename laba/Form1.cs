@@ -12,7 +12,7 @@ namespace laba
 {
     public partial class Form1 : Form
     {
-        private SuperBenzovoz car;
+        private ITransport car;
 
         public Form1()
         {
@@ -58,6 +58,14 @@ namespace laba
                     car.MoveTransport(Direction.Right);
                     break;
             }
+            Draw();
+        }
+
+        private void buttonCreateGruzovik_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            car = new Gruzovick(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Gray, Color.DarkBlue, Color.Black);
+            car.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxCar.Width, pictureBoxCar.Height);
             Draw();
         }
     }
