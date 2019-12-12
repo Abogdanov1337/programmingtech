@@ -15,11 +15,22 @@ namespace laba
         Right
     }
 
-    public class SuperBenzovoz : Gruzovick
+    public class SuperBenzovoz : Gruzovick, IComparable<SuperBenzovoz>, IEquatable<SuperBenzovoz>
     {
         public SuperBenzovoz(int maxSpeed, float weight, Color mainColor, Color dopColor, Color wheelsColor) : 
             base(maxSpeed, weight, mainColor, dopColor, wheelsColor)
         {
+        }
+
+        public SuperBenzovoz(string info) : base(info)
+{
+            string[] strs = info.Split(';');
+            if (strs.Length == 8)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+            }
         }
 
         public override string getCarType()
@@ -70,6 +81,77 @@ namespace laba
             g.FillRectangle(brWheels, _startPosX + 60, _startPosY + 20, 4, 6);
             g.FillEllipse(brYellow, _startPosX + 85, _startPosY + 28, 6, 4);
         }
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name;
+        }
+        /// <summary>
+        /// Метод интерфейса IComparable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public int CompareTo(SuperBenzovoz other)
+        {
+            var res = (this is Gruzovick).CompareTo(other is Gruzovick);
+            if (res != 0)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                DopColor.Name.CompareTo(other.DopColor.Name);
+            }
+            return 0;
+        }
+        /// <summary>
+        /// Метод интерфейса IEquatable для класса SportCar
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Equals(SuperBenzovoz other)
+        {
+            var res = (this as Gruzovick).Equals(other as Gruzovick);
+            if (!res)
+            {
+                return res;
+            }
+            if (GetType().Name != other.GetType().Name)
+            {
+                return false;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is SuperBenzovoz carObj))
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(carObj);
+            }
+        }
+        /// <summary>
+        /// Перегрузка метода от object
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
-    

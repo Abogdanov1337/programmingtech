@@ -35,6 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBoxTakeCar = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTakeCar)).BeginInit();
@@ -50,11 +51,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(793, 12);
+            this.button1.Location = new System.Drawing.Point(787, 155);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 66);
+            this.button1.Size = new System.Drawing.Size(176, 37);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Припарковать грузовик";
+            this.button1.Text = "Добавить автомобиль";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonParkGruzovick_Click);
             // 
@@ -97,19 +98,29 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(794, 84);
+            this.button3.Location = new System.Drawing.Point(788, 198);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 62);
+            this.button3.Size = new System.Drawing.Size(175, 44);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Припарковать бензовоз";
+            this.button3.Text = "Сортировать";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.buttonParkBenzovoz_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(787, 17);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(182, 132);
+            this.listBox1.TabIndex = 5;
             // 
             // FormParking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 513);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
@@ -133,5 +144,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

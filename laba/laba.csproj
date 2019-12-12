@@ -57,7 +57,9 @@
     <Compile Include="FormParking.Designer.cs">
       <DependentUpon>FormParking.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultiLevelParking.cs" />
     <Compile Include="Parking.cs" />
+    <Compile Include="ParkingAlreadyHaveException.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Gruzovick.cs" />
     <Compile Include="ITransport.cs" />
