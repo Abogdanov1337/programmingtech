@@ -15,7 +15,7 @@ namespace laba
         Right
     }
 
-    class SuperBenzovoz : Gruzovick
+    public class SuperBenzovoz : Gruzovick
     {
         public SuperBenzovoz(int maxSpeed, float weight, Color mainColor, Color dopColor, Color wheelsColor) : 
             base(maxSpeed, weight, mainColor, dopColor, wheelsColor)

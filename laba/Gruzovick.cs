@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace laba
 {
-    class Gruzovick : Vehicle
+    public class Gruzovick : Vehicle
     {
         protected const int carWidth = 100;
         protected const int carHeight = 60;
